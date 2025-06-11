@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 10px 8%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+nav>img{
+    width: 150px;
+    cursor: pointer;
+}
+
+#lan{
+    color: white;
+    background-color: rgb(35, 33, 33);
+}
+
+.button3{
+    color: white;
+    outline: 0;
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.button1{
+    background-color: rgb(17, 16, 16);
+    padding: 8px 20px;
+    border: 1px solid rgb(103, 100, 100);
+}
+.button2{
+    background-color: rgb(229,9,20);
+    border: 0;
+    font-size: 14px;
+}
+
+.imgbut{
+    padding-left: 5px;
+}
+
+.maincontent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 0px; 
+    text-align: center;
+}
+
+.maincontent h1{
+    font-size: 53px;
+    line-height: 70px;
+    font-weight: 650;
+    max-width: 650px;
+}
+.maincontent h3{
+    font-weight: 60px;
+    margin-bottom: 20px;
+    
+}
+
+.inputsub{
+    background-color: transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+}
+
+.inputsub input{
+    font-size: 18px;
+    padding: 20px 70px 20px 120px;
+    background-color: transparent;
+    border-radius: 4px;
+    outline: 0;
+    color: white;
+    border: 1px solid rgb(80, 76, 76);
+    margin-right: 10px;
+}
+
+.inputsub button{
+    background-color: red;
+    padding: 18px 50px;
+    outline: 0;
+    border: 1px red;
+    border-radius: 4px;
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+} 
+
+/* -----------content------------- */
+
+.content{
+    padding: 50px 12px;
+    font-size: 22px; 
+}
+
+.rows{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.textdata1{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.imgfeature1{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.imgfeature1 img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+/* ---------faq----------- */
+
+.faq{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 12%;
+}
+
+.faq h2{
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.ulfaq{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.ulfaq li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.ulfaq li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600; 
+    margin-bottom: 2px;
+    background-color: #303030;
+    cursor: pointer;
+    position: relative;
+}
+
+.ulfaq li label::after{
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.ulfaq .content1{
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s , padding 0.2s ;
+}
+
+.ulfaq input[type="radio"]:checked + label + .content1{
+    max-height: 600px;
+    padding: 20px 30px;
+}
+
+.ulfaq input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+.footer{
+    padding: 50px 10% 10px;
+    color: #777;
+}
+
+.footer h2{
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.row{
+    display: flex;
+
+}
+
+.column{
+    display: flex;
+    flex-basis: 25%;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.column a{
+    color: #777;
+    padding: 5px;
+}
+
+.foot{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.last{
+    margin-bottom: 100px;
+}
+
+/* -------media-query-for-smaller-screens---------- */
+
+@media only screen and (max-width:600px) {
+    .logo{
+        width: 100px;
+    }
+    .maincontent{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+        width: 100%;
+    }
+    .maincontent h1{
+        font-size: 34px;
+    }
+    .inputsub{
+        display: flex;
+        flex-direction: column;
+    }
+    .inputsub input{
+        padding: 20px 66px ;
+        margin-bottom: 10px;
+    }
+    .inputsub .button{
+        padding: 5px;
+    }
+    .rows{
+        display: flex;
+        flex-direction: column;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+}
